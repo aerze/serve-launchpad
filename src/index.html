@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="lib/css/normalize.css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="lib/css/main.css" />
+
+</head>
+<body>
+<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="app/js/titlebar.js"></script> <!-- This will run in chrome's JS context -->
+<script type="text/javascript">
+'use strict';
+console.log('window');
+
+
+var gui = require('nw.gui');
+var win = gui.Window.get();
+// var addTitlebar = require('./app/js/titlebarRequire.js');  /* This would run in node's JS context */ 
+
+$(document).on('ready', function() {
+    addTitlebar('top-titlebar', document);
+
+});
+
+</script>
+</body>
+<!-- 'C:\\Users\\gsuarez\\Desktop\\Projects\\webkit\\src\\package.json' -->
+<!-- "shell_cmd": "C:\\Users\\gsuarez\\Desktop\\Projects\\webkit\\node-webkit-latest\\nw.exe \"C:\\Users\\gsuarez\\Desktop\\Projects\\webkit\\dist\\warp.nw\" --remote-debugging-port=9222" -->
+
+</html>
